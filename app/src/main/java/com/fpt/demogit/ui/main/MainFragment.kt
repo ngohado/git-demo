@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        viewModel.load(userId = "123")
         // TODO: Use the ViewModel
     }
 
