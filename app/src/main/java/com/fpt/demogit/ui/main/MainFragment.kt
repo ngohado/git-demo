@@ -30,4 +30,10 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_main, container, true)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.user.observe(viewLifecycleOwner) {
+            // TODO
+        }
+    }
 }
