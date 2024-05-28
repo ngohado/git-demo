@@ -17,5 +17,13 @@ class MainViewModel : ViewModel() {
             )
         }
     }
-    // TODO: Implement the ViewModel
+
+    fun onUserClickChangeAvatar() {
+        // Change avatar and Update UI
+        state.updateState {
+            it.copy(
+                user = repository.changeAvatar()
+            )
+        }
+    }
 }
