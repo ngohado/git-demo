@@ -26,4 +26,15 @@ class MainViewModel : ViewModel() {
             )
         }
     }
+
+    fun onUserUpdateName(name: String) {
+        // Update name
+        repository.updateName(name)
+        // Update UI
+        state.updateState {
+            it.copy(
+                user = repository.getUser(it.user.id)
+            )
+        }
+    }
 }
